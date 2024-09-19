@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Slideshow</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .slideshow-wrapper {
+      display: flex;
+      width: 300%; /* 100% for each slide */
+      animation: slide 9s infinite;
+    }
+
+    .slide {
+      flex: 1;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto;
+    }
+
+    .portfolio__title {
+      font-size: 24px;
+      margin-top: 10px;
+    }
+
+    .portfolio__description {
+      margin: 10px 0;
+    }
+
+    .button {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    .button:hover {
+      background-color: #555;
+    }
+
+    /* Animation */
+    @keyframes slide {
+      0% { transform: translateX(0); }
+      33.33% { transform: translateX(0); }
+      33.34% { transform: translateX(-100%); }
+      66.66% { transform: translateX(-100%); }
+      66.67% { transform: translateX(-200%); }
+      100% { transform: translateX(-200%); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slideshow-container">
+    <div class="slideshow-wrapper">
+      <!-- Slide 1 -->
+      <div class="slide">
+        <img src="images/projects/madf.png" alt="MADF Landing" class="portfolio__img">
+        <div class="portfolio__data">
+          <h3 class="portfolio__title">MADF Website</h3>
+          <p class="portfolio__description">This is an NGO website for charity purposes</p>
+          <a href="https://olayimka.github.io/MADF/" class="button button--flex services__button">
+            Demo <i class="uil uil-arrow-right button__icon"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide">
+        <img src="images/projects/finco.png" alt="Second Project" class="portfolio__img">
+        <div class="portfolio__data">
+          <h3 class="portfolio__title">Second Project</h3>
+          <p class="portfolio__description">Description for the second project.</p>
+          <a href="#" class="button button--flex services__button">Demo 
+            <i class="uil uil-arrow-right button__icon"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slide">
+        <img src="images/projects/hotel.png" alt="Third Project" class="portfolio__img">
+        <div class="portfolio__data">
+          <h3 class="portfolio__title">Third Project</h3>
+          <p class="portfolio__description">Description for the third project.</p>
+          <a href="#" class="button button--flex services__button">Demo 
+            <i class="uil uil-arrow-right button__icon"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
